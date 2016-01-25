@@ -33,7 +33,6 @@ describe("quantities",function(){
 		g.addVertex('A');
 		g.addVertex('B');
 		g.addEdge('A','B');
-
 		assert.equal(1,g.size());
 	});
 	it("should provide the size of a graph with multiple edges",function(){
@@ -43,14 +42,12 @@ describe("quantities",function(){
 		g.addVertex('C');
 		g.addEdge('A','B');
 		g.addEdge('B','C');
-
 		assert.equal(2,g.size());
 	});
 	it("should provide the size of a graph with no edges",function(){
 		var g=new graphs.UndirectedGraph();
 		g.addVertex('A');
 		g.addVertex('B');
-
 		assert.equal(0,g.size());
 	});
 });
@@ -65,12 +62,17 @@ describe("paths",function(){
 		g.addVertex('D');
 		g.addVertex('E');
 	});
+	it("should determine a path bw same vertices",function(){
+		g.addEdge('A','A');
+
+		var path=g.pathBetween('A','A')
+
+		assert.deepEqual(['A'],path);
+	});
 
 	it("should determine a path between two adjacent vertices",function(){
 		g.addEdge('A','B');
-
 		var path=g.pathBetween('A','B')
-
 		assert.deepEqual(['A','B'],path);
 	});
 
@@ -130,6 +132,7 @@ describe("paths",function(){
 		}
 	});
 	it("should determine the farthest vertex from a given vertex for a simple graph",function(){
+		console.log('graph',g);
 		g.addEdge('A','B');
 
 		assert.equal('B',g.farthestVertex('A'));
@@ -137,6 +140,7 @@ describe("paths",function(){
 	it("should determine the farthest vertex from a given vertex for a simple graph with two edges",function(){
 		g.addEdge('A','B');
 		g.addEdge('B','C');
+		console.log('gggggggggg');
 		assert.equal('C',g.farthestVertex('A'));
 	});
 	it("should determine the farthest vertex from a given vertex with outdegree > 1",function(){

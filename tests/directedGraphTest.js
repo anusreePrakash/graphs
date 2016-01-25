@@ -33,7 +33,6 @@ describe("quantities",function(){
 		g.addVertex('A');
 		g.addVertex('B');
 		g.addEdge('A','B');
-
 		assert.equal(1,g.size());
 	});
 	it("should provide the size of a graph with multiple edges",function(){

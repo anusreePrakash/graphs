@@ -1,0 +1,25 @@
+{
+  "name": "graphs",
+  "version": "1.0.0",
+  "description": "A set of javascript tests designed to get you to implement graphs.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anusreePrakash/graphs.git"
+  },
+  "author": "anusree",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anusreePrakash/graphs/issues"
+  },
+  "homepage": "https://github.com/anusreePrakash/graphs#readme",
+  "dependencies": {
+    "chai": "^3.4.1"
+  }
+}
